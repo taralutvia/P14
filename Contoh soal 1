@@ -1,0 +1,52 @@
+#include <iostream>
+#include <cstdlib>//nanti
+
+using namespace std;
+
+int stock_kaos[1];
+
+int tambah(int stock){
+    cout<<"Tambah stock : ";
+    cin>>stock;
+    stock_kaos[1]=stock_kaos[1]+stock;
+    return stock_kaos[1];
+
+}
+int kurang(int stock){
+    cout<<"Kurang stock : ";
+    cin>>stock;
+    stock_kaos[1]=stock_kaos[1]-stock;
+    return stock_kaos[1];
+
+}
+int main()
+{   int Hasil;
+    int pil;
+    int stock;
+
+    stock_kaos[1]=0;
+    cout<<"Stock kaos :"<<stock_kaos[1]<<endl;
+    cout<<endl;
+
+    cout<<"1. Tambah"<<endl;
+    cout<<"2. Kurang"<<endl;
+    cout<<"3. Keluar"<<endl;
+    cout<<"Masukan Pilihan : ";
+    cin>>pil;
+    system("cls");
+    while((pil!=3)){
+        if(pil==1){Hasil=tambah(stock);}
+        if(pil==2){Hasil=kurang(stock);}
+        system("cls");
+    cout<<"Stock kaos :"<<stock_kaos[1]<<endl<<endl;
+    cout<<"1. Tambah"<<endl;
+    cout<<"2. Kurang"<<endl;
+    cout<<"3. Keluar"<<endl;
+    cout<<"Masukan Pilihan : ";
+    cin>>pil;
+    system("cls");
+    }
+    cout<<"Stock kaos :"<<stock_kaos[1]<<endl;
+    cout<<"Sudah keluar"<<endl;
+    return 0;
+}
